@@ -1,13 +1,12 @@
 async function getData() {
-  const res = await fetch("https://randomuser.me/api/?results=100");
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+  const res = await fetch("https://randomuser.me/api/?results=100", {
+    cache: "force-cache",
+  });
   return res.json();
 }
 
 export default async function Home() {
   const data = await getData();
-  console.log(data);
   const users = data?.results || [];
 
   const result = [];

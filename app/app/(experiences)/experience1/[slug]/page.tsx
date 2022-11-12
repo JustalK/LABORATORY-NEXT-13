@@ -1,10 +1,4 @@
-export default function Page({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams: { id: string };
-}) {
+export default function Page({ params, searchParams }: any) {
   return (
     <>
       <p>{params.slug}</p>

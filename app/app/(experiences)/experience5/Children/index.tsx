@@ -1,10 +1,12 @@
+import { use } from "react";
+
 async function getData() {
-  const res = await fetch("https://randomuser.me/api/?results=5000");
+  const res = await fetch("https://randomuser.me/api/?results=100");
   return res.json();
 }
 
-export default async function Children() {
-  const data = await getData();
+export default function Children() {
+  const data = use(getData());
   const users = data?.results || [];
 
   const result = [];
@@ -12,5 +14,5 @@ export default async function Children() {
     result.push(<div>{user.email}</div>);
   }
 
-  return result;
+  return <div>{result}</div>;
 }
