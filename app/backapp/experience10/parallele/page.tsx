@@ -11,20 +11,22 @@ async function getMale() {
 }
 
 function Male({ dataMan }: any) {
-  const { results: male } = use(getMale());
+  const { results: male }: any = use(dataMan);
 
-  return <div>MALE: {male[0].email}</div>;
+  return <div>MALE: {male?.[0].email}</div>;
 }
 
 export default async function Home() {
   const dataWomen = getWomen();
+  const dataMan = getMale();
+
   const { results: women } = await dataWomen;
 
   return (
     <div>
-      <div>WOMEN: {women[0].email}</div>
+      <div>WOMEN: {women?.[0].email}</div>
       <Suspense fallback={<div>Loading...</div>}>
-        <Male />
+        <Male dataMan={dataMan} />
       </Suspense>
     </div>
   );
