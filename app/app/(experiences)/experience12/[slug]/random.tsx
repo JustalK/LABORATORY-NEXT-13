@@ -1,7 +1,13 @@
-import { cache, use } from "react";
+import { cache } from "react";
+import axios from "axios";
 
-export const getRandom = cache((val: any) => {
-  const res = use(fetch("https://randomuser.me/api"));
-  const result: any = res.json();
-  return result.resultats[0].email;
+export const getRandom = cache(async (val: any) => {
+  try {
+    const res = await axios.get("https://randomuser.me/api");
+    const result: any = res.data;
+    console.log(result.results[0].email);
+    return result.results[0].email;
+  } catch (e) {
+    return "N/A";
+  }
 });
