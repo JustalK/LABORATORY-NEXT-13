@@ -14,6 +14,11 @@
 - **Experience10**: Testing the parallele vs sequential fetches
 - **Experience11**: Testing revalidation by segment (revalidate in page) (work only with build&start)
 - **Experience12**: Testing loading a call inside axios and cache it (not working, why?)
+- **Experience13**: Testing Server Component vs Client Component (a: Need to be Serializable)
+  Pay attention to the package: server-only
+  It can avoid Poisonous component (running on server and client)
+  Context work also only on client component
+- **Experience14**:
 
 ## Links
 

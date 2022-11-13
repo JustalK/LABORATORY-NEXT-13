@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <Children
         date={new Date()}
-        fn={JSON.stringify(() => console.log("test"))}
+        // fn={() => console.log("test")} <= Will never work because it's not serializable
       />
     </div>
   );
