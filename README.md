@@ -1,4 +1,18 @@
-# LABORATORY-FLUTTER-3
+# LABORATORY-NEXT-13
+
+A new version of NEXT is available, it's time to test the difference and how to use the new features. This laboratory is all about **Next13**. The new version present now a folder app where you implement your application. In addition, a new way of using the generation of page and fetch has been added with this new version.
+
+**WARNING**: I have been using a free API for testing few of the experience. This api has a rate limiter so only a certain part of the app can be build at once. If you want to test a particular experience, you might need to move it from the folder *backapp* to the *app* folder.
+
+## Plan of the presentation
+
+I explain with all the details how I build the project and my way of working.
+
+- [Experiences](#experiences)
+- [Running](#running)
+- [System](#system)
+- [Interesting points](#interesting-points)
+- [Links](#links)
 
 ## Experiences
 
@@ -18,7 +32,38 @@
   Pay attention to the package: server-only
   It can avoid Poisonous component (running on server and client)
   Context work also only on client component
-- **Experience14**:
+
+## Running
+
+I am using NX, so for starting the project use the following command:
+
+```bash
+$ npm run dev
+```
+
+And for some experience, you can only see the result if you build the app
+
+```bash
+$ npm run build
+$ npm run start
+```
+
+## System
+
+Ubuntu Version: Ubuntu 20.04.1 LTS
+Node Version: v16.17.3
+
+```bash
+# Get the version of node
+$ node -v
+
+# Get the latest version of ubuntu
+$ lsb_release -a
+```
+
+## Interesting points
+
+- Turbopack (alpha)
 
 ## Links
 
